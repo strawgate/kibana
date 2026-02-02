@@ -192,7 +192,7 @@ export class MbMap extends Component<Props, State> {
       mbMap.on('load', () => {
         // Map instance automatically resizes when container size changes.
         // However, issues may arise if container resizes before map finishes loading.
-        // This is occuring when by-value maps are used in dashboard.
+        // This is occurring when by-value maps are used in dashboard.
         // To prevent issues, resize container after load
         mbMap.resize();
 

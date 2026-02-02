@@ -148,7 +148,7 @@ export function LogRateAnalysisPanel({ slo, alert, rule }: Props) {
     const content = `You are an observability expert using Elastic Observability Suite on call being consulted about a log threshold alert that got triggered by a ${logRateAnalysisType} in log messages. Your job is to take immediate action and proceed with both urgency and precision.
       "Log Rate Analysis" is an AIOps feature that uses advanced statistical methods to identify reasons for increases and decreases in log rates. It makes it easy to find and investigate causes of unusual spikes or dips by using the analysis workflow view.
       You are using "Log Rate Analysis" and ran the statistical analysis on the log messages which occured during the alert.
-      You received the following analysis results from "Log Rate Analysis" which list statistically significant co-occuring field/value combinations sorted from most significant (lower p-values) to least significant (higher p-values) that ${
+      You received the following analysis results from "Log Rate Analysis" which list statistically significant co-occurring field/value combinations sorted from most significant (lower p-values) to least significant (higher p-values) that ${
         logRateAnalysisType === LOG_RATE_ANALYSIS_TYPE.SPIKE
           ? 'contribute to the log rate spike'
           : 'are less or not present in the log rate dip'

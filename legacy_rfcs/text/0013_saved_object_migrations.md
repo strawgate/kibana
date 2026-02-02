@@ -262,7 +262,7 @@ Note:
    2. Ignore `version_conflict_engine_exception` exceptions as they just mean that another node was indexing the same documents
    3. If a `target_index_had_write_block` exception is encountered for all document of a batch, assume that another node already completed the temporary index reindex, and jump to the next step
    4. If a document transform throws an exception, add the document to a failure list and continue trying to transform all other documents (without writing them to the temp index). If any failures occured, log the complete list of documents that failed to transform, then fail the migration.
-9. Clone the temporary index into the target index `.kibana_7.10.0_001`. Since any further writes will only happen against the cloned target index this prevents a lost delete from occuring where one instance finishes the migration and deletes a document and another instance's reindex operation re-creates the deleted document.
+9. Clone the temporary index into the target index `.kibana_7.10.0_001`. Since any further writes will only happen against the cloned target index this prevents a lost delete from occurring where one instance finishes the migration and deletes a document and another instance's reindex operation re-creates the deleted document.
    1. Set a write block on the temporary index
    2. Clone the temporary index into the target index while specifying that the target index should have writes enabled.
    3. If the clone operation fails because the target index already exist, ignore the error and wait for the target index to become green before proceeding.
@@ -751,7 +751,7 @@ to the migration algorithm from (5.4.1)
    start serving traffic.
 
 Steps (2) and (3) from the migration algorithm in minimize the chances of the
-following scenarios occuring but cannot guarantee it. It is therefore useful
+following scenarios occurring but cannot guarantee it. It is therefore useful
 to enumarate some scenarios and their worst case impact:
 1. An outdated node issued a bulk create to it's version-specific alias.
    Because a user doesn't wait for all traffic to drain a newer node starts

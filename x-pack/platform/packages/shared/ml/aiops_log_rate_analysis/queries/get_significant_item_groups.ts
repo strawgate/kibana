@@ -36,7 +36,7 @@ export function getSignificantItemGroups(
   // Get a tree structure based on `frequent_item_sets`.
   const { root } = getSimpleHierarchicalTree(itemsets, false, false, significantItems, fields);
 
-  // Each leave of the tree will be a summarized group of co-occuring field/value pairs.
+  // Each leave of the tree will be a summarized group of co-occurring field/value pairs.
   const treeLeaves = getSimpleHierarchicalTreeLeaves(root, []);
 
   // To be able to display a more cleaned up results table in the UI, we identify field/value pairs

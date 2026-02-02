@@ -68,7 +68,7 @@ KBN_OPTIMIZER_THEMES=* yarn start
 
 ## API
 
-To run the optimizer from code, you can import the [`OptimizerConfig`][OptimizerConfig] class and [`runOptimizer`][runOptimizer] function. Create an [`OptimizerConfig`][OptimizerConfig] instance by calling it's static `create()` method with some options, then pass it to the [`runOptimizer`][runOptimizer] function. `runOptimizer()` returns an observable of update objects, which are summaries of the optimizer state plus an optional `event` property which describes the internal events occuring and may be of use. You can use the [`logOptimizerState()`][LogOptimizerState] helper to write the relevant bits of state to a tooling log or checkout it's implementation to see how the internal events like [`WorkerStdio`][ObserveWorker] and [`WorkerStarted`][ObserveWorker] are used.
+To run the optimizer from code, you can import the [`OptimizerConfig`][OptimizerConfig] class and [`runOptimizer`][runOptimizer] function. Create an [`OptimizerConfig`][OptimizerConfig] instance by calling it's static `create()` method with some options, then pass it to the [`runOptimizer`][runOptimizer] function. `runOptimizer()` returns an observable of update objects, which are summaries of the optimizer state plus an optional `event` property which describes the internal events occurring and may be of use. You can use the [`logOptimizerState()`][LogOptimizerState] helper to write the relevant bits of state to a tooling log or checkout it's implementation to see how the internal events like [`WorkerStdio`][ObserveWorker] and [`WorkerStarted`][ObserveWorker] are used.
 
 Example:
 ```ts

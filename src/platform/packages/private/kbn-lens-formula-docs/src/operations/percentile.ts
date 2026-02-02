@@ -25,7 +25,7 @@ export const percentile: OperationDocumentationType = {
     }),
     description: i18n.translate('lensFormulaDocs.percentile.documentation.markdown', {
       defaultMessage: `
-Returns the specified percentile of the values of a field. This is the value n percent of the values occuring in documents are smaller.
+Returns the specified percentile of the values of a field. This is the value n percent of the values occurring in documents are smaller.
 
 Example: Get the number of bytes larger than 95 % of values:  
 \`percentile(bytes, percentile=95)\`
